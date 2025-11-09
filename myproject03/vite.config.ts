@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  root: 'myproject03', // 👈 carpeta donde está tu index.html
   plugins: [
     react({
       babel: {
@@ -11,6 +11,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: 'dist', // carpeta donde se genera el build de producción
+    outDir: '../dist', // 👈 construye la carpeta dist fuera de myproject03
+    emptyOutDir: true,
   },
 })
